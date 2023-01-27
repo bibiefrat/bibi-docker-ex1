@@ -1,5 +1,13 @@
 #FROM ubuntu:20.04
 #FROM bitnami/mongodb
+################################################################################################################################################
+#   RUN container as follow:
+# sudo docker  run    -p 27272:27017 -p 8081:8081 -p  8080:80 -e "MONGO_URL_RUN=mongodb://10.100.1.143:20000"  -d --rm 67fe59c1217c
+# the above run mongo on same container as JS
+# you could run another mongo container as:
+#  sudo docker run -p 20000:27017 --rm -d --rm <mongo image id>
+################################################################################################################################################
+
 FROM mongo
 #FROM bitnami/mongodb
 SHELL ["/bin/bash", "-c"]
@@ -35,3 +43,4 @@ ENTRYPOINT /nodeApp/run_all.sh $MONGO_URL_RUN
 #ENTRYPOINT mongod
 #CMD ["/bin/bash"]
 #CMD sleep 100
+
