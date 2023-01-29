@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install nginx nodejs npm curl vim -y
 #RUN apt install -y mongodb
 
 ARG MONGO_URL_BUILD="mongodb+srv://bibiefrat:a3bAcd01@cluster0.mnem9gq.mongodb.net/?retryWrites=true&w=majority"
-ENV NONGO_URL_RUN=$MONGO_URL_BUILD 
+ENV MONGO_URL_RUN=$MONGO_URL_BUILD
 #RUN npm install -g yarn
 #RUN yarn add mongodb
 RUN npm install mongodb 
