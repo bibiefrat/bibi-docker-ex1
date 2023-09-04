@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "mongodb": "^4.13.0"
+    "mongodb": "^4.16.0"
   }
 }
