@@ -8,7 +8,7 @@
 #  sudo docker run -p 20000:27017 --rm -d --rm <mongo image id>
 ################################################################################################################################################
 
-FROM mongo
+FROM mongo:7.0.6
 #FROM bitnami/mongodb
 SHELL ["/bin/bash", "-c"]
 RUN apt-get update && apt-get install nginx nodejs npm curl vim -y
